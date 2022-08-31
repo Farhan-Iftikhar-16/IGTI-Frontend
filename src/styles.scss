@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Almarai Regular'), url('/assets/fonts/Almarai.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Almarai Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Almarai Light'), url('/assets/fonts/Almarai-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Almarai Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Almarai Bold'), url('/assets/fonts/Almarai-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Almarai ExtraBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Almarai ExtraBold'), url('/assets/fonts/Almarai-ExtraBold.woff') format('woff');
+}
+
+body {
+  background: #121212 !important;
+  color: #FFFFFF !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Almarai', serif;
+  font-style: normal;
+}

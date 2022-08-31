@@ -1,0 +1,272 @@
+<div class="container-fluid navigation-log-container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between align-items-center">
+      <h2 class="app-sub-heading">Navigation Log</h2>
+    </div>
+  </div>
+
+  <div>
+    <div class="dep-to-dest-container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 d-flex flex-column justify-content-between" style="border-right : 1px solid #FFFFFF">
+          <div class="d-flex justify-content-between align-items-center">
+            <span style="width : 25%;">DEP</span>
+            <span style="width : 25%;"><img src="assets/icons/arrow-left.png" alt=""></span>
+            <span style="width : 25%;">DEST</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <span style="width : 25%;">DEP</span>
+            <span style="width : 25%;"><img src="assets/icons/arrow.png" alt=""></span>
+            <span style="width : 25%; font-size : 18.1511px; line-height : 23px;">primary ALT :</span>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6">
+          <div class="est-container">
+            <h6>EST  :</h6>
+            <div class="d-flex justify-content-between ms-3">
+              <span>START : </span>
+              <span>T/0 : </span>
+              <span>ARR : </span>
+              <span>L/D : </span>
+            </div>
+          </div>
+          <div class="act-container">
+            <h6>ACT  :</h6>
+            <div class="d-flex justify-content-between ms-3">
+              <span>START : </span>
+              <span>T/0 : </span>
+              <span>ARR : </span>
+              <span>L/D : </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-left: 1px solid white;">
+      <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png" alt=""></i>
+
+      <div class="ps-3">
+        <div class="dep-container">
+          <div class="row">
+            <div class="col-lg-3 cod-md-3 col-sm-6">
+              <div class="dep-type-container">
+                <div>
+                  <span class="me-4">DEP TYPE : </span>
+                  <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                </div>
+                <div>
+                  <span>Plate provider :</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+              <div class="dep-name-container">
+                <div>
+                  <span>
+                    <span class="me-4">DEP NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+                  <div>
+                    <span>W</span>
+                    <span>V</span>
+                  </div>
+
+                  <div>
+                    <span>ETE</span>
+                    <span>ETA</span>
+                    <span>ATA</span>
+                  </div>
+                </div>
+                <div class="alt-dep-container">
+                  <i><img src="assets/icons/collapse.png" alt=""></i>
+                  <div class="ps-3" style="border-left : 1px solid white">
+                    <span>ALT DEP</span>
+                    <br>
+                    <div>
+                      <span class="me-4">AVAIL :</span>
+                      <i><img src="assets/icons/expand-small.png" alt=""></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="border-left: 1px solid white; margin-top: 5px">
+          <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png" alt=""></i>
+
+          <div class="ps-3">
+            <div class="table-container">
+              <p-table [value]="items">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>WPT</th>
+                    <th>FROM TO</th>
+                    <th>TAS</th>
+                    <th>ALT</th>
+                    <th>TRK</th>
+                    <th>AWY</th>
+                    <th>DME</th>
+                    <th>W</th>
+                    <th>V</th>
+                    <th>HDG(T)</th>
+                    <th>HDG(M)</th>
+                    <th>G/S Plan</th>
+                    <th>G/S Act</th>
+                    <th>Dist</th>
+                    <th>ETE</th>
+                    <th>ETA</th>
+                    <th>ATA</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-item>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ps-3">
+        <div class="arr-container">
+          <div class="row">
+            <div class="col-lg-3 cod-md-3 col-sm-6">
+              <div class="dep-type-container">
+                <div>
+                  <span class="me-4">ARR TYPE : </span>
+                  <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                </div>
+                <div>
+                  <span>Plate provider :</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+              <div class="dep-name-container">
+                <div>
+                  <span>
+                    <span class="me-4">ARR NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+                  <div>
+                    <span>W</span>
+                    <span>V</span>
+                  </div>
+
+                  <div>
+                    <span>ETE</span>
+                    <span>ETA</span>
+                    <span>ATA</span>
+                  </div>
+                </div>
+                <div class="alt-dep-container">
+                  <i><img src="assets/icons/collapse.png" alt=""></i>
+                  <div class="ps-3" style="border-left : 1px solid white">
+                    <span>ALT DEP</span>
+                    <br>
+                    <div>
+                      <span class="me-4">AVAIL :</span>
+                      <i><img src="assets/icons/expand-small.png" alt=""></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div style="border-left: 1px solid white; margin-top: 10px  ">
+          <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png"></i>
+
+          <div class="ps-3">
+            <div class="aprch-container">
+              <div class="row">
+                <div class="col-lg-3 cod-md-3 col-sm-6">
+                  <div class="dep-type-container">
+                    <div>
+                      <span class="me-4">APRCH TYPE : </span>
+                      <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                    </div>
+                    <div>
+                      <span>Plate provider :</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+                  <div class="dep-name-container">
+                    <div>
+                  <span>
+                    <span class="me-4">APRCH NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+                      <div>
+                        <span>W</span>
+                        <span>V</span>
+                      </div>
+
+                      <div>
+                        <span>ETE</span>
+                        <span>ETA</span>
+                        <span>ATA</span>
+                      </div>
+                    </div>
+                    <div class="alt-dep-container">
+                      <i><img src="assets/icons/collapse.png" alt=""></i>
+                      <div class="ps-3" style="border-left : 1px solid white">
+                        <span>ALT DEP</span>
+                        <br>
+                        <div>
+                          <span class="me-4">AVAIL :</span>
+                          <i><img src="assets/icons/expand-small.png" alt=""></i>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-provider-container">
+   <h4>Chart provider :</h4>
+  </div>
+</div>
+
+<div style="position: absolute; top: 190px;">
+  <img src="assets/icons/Side%20bar%20left.png">
+</div>
+
+<div style="position: absolute; top: 190px; right: 0">
+  <img src="assets/icons/Side%20bar%20right.png ">
+</div>
