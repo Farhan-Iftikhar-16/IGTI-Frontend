@@ -1,0 +1,130 @@
+.app-title-container {
+  background: #575757;
+
+  .app-main-heading {
+    font-weight: 400;
+    font-size: 53.5862px;
+    line-height: 60px;
+    color: #FFFFFF;
+  }
+
+  .search-bar-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: unset;
+    padding: 0 !important;
+  }
+
+  .p-input-icon-left > i:first-of-type {
+    left: -2.25rem;
+    color: #FFFFFF;
+  }
+}
+
+.tabs-container {
+  max-width: 98%;
+  overflow: auto;
+  display: -webkit-inline-box;
+  padding: 5px 0;
+  margin: 5px 0;
+
+  .tab-container {
+    width: 198px;
+    height: 30px;
+    background: #444444;
+    border-radius: 7px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tab-title {
+      font-family: 'Almarai', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15.5077px;
+      line-height: 18px;
+      color: #FFFFFF;
+    }
+
+    .pi-times {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 24px;
+      color: #FFFFFF;
+      width: 13px;
+      height: 24px;
+    }
+  }
+
+  .tab-container:first-child {
+    background: #8D8D8D;
+  }
+
+  .tab-container:nth-child(4) {
+    background: #D17532;
+  }
+
+  .tab-container:nth-child(5) {
+    background: #B66565;
+  }
+
+  .tab-container:nth-child(6) {
+    background: #516F9B;
+  }
+
+  .tab-container:nth-child(7) {
+    background: #367B3D;
+  }
+}
+
+.add-new-tab-container {
+  display: flex;
+  flex-direction: column;
+
+  .pi {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tab-details-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 65% 5px 0;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: #FFFFFF;
+
+  .nav-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+}
+
+.app-sub-heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 51.6923px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar { width: 8px; height: 6px;}
+::-webkit-scrollbar-button {  background-color: #746E6E; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #746E6E; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #746E6E;}
+

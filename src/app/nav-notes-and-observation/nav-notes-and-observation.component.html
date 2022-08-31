@@ -1,0 +1,534 @@
+<div class="container-fluid navigation-notes-and-observation-container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between align-items-center">
+      <h2 class="app-sub-heading">Nav Notes & Obsv.</h2>
+    </div>
+  </div>
+
+  <div>
+    <div class="dep-to-dest-container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 d-flex flex-column justify-content-between" style="border-right : 1px solid #FFFFFF">
+          <div class="d-flex justify-content-between align-items-center">
+            <span style="width : 25%;">DEP</span>
+            <span style="width : 25%;"><img src="assets/icons/arrow-left.png" alt=""></span>
+            <span style="width : 25%;">DEST</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <span style="width : 25%;">DEP</span>
+            <span style="width : 25%;"><img src="assets/icons/arrow.png" alt=""></span>
+            <span style="width : 25%; font-size : 18.1511px; line-height : 23px;">primary ALT :</span>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6">
+          <div class="est-container">
+            <h6>EST  :</h6>
+            <div class="d-flex justify-content-between ms-3">
+              <span>START : </span>
+              <span>T/0 : </span>
+              <span>ARR : </span>
+              <span>L/D : </span>
+            </div>
+          </div>
+          <div class="act-container">
+            <h6>ACT  :</h6>
+            <div class="d-flex justify-content-between ms-3">
+              <span>START : </span>
+              <span>T/0 : </span>
+              <span>ARR : </span>
+              <span>L/D : </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-left: 1px solid white;">
+      <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png" alt=""></i>
+
+      <div class="ps-3">
+        <div class="dep-container">
+          <div class="row">
+            <div class="col-lg-3 cod-md-3 col-sm-6">
+              <div class="dep-type-container">
+                <div>
+                  <span class="me-4">DEP TYPE : </span>
+                  <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                </div>
+                <div>
+                  <span>Plate provider :</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+              <div class="dep-name-container">
+                <div>
+                  <span>
+                    <span class="me-4">DEP NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+                  <div>
+                    <span>W</span>
+                    <span>V</span>
+                  </div>
+
+                  <div>
+                    <span>ETE</span>
+                    <span>ETA</span>
+                    <span>ATA</span>
+                  </div>
+                </div>
+                <div class="alt-dep-container">
+                  <i><img src="assets/icons/collapse.png" alt=""></i>
+                  <div class="ps-3" style="border-left : 1px solid white">
+                    <span>ALT DEP</span>
+                    <br>
+                    <div>
+                      <span class="me-4">AVAIL :</span>
+                      <i><img src="assets/icons/expand-small.png" alt=""></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="border-left: 1px solid white; margin-top: 5px">
+          <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png" alt=""></i>
+
+          <div class="ps-3">
+            <div class="comms-nav-notes-container">
+              <div class="comms-container">
+                <h3>COMMS: </h3>
+                <p-table [value]="comms" class="comms-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th>TYPE</th>
+                      <th>FACILITY</th>
+                      <th>AIRSPACE</th>
+                      <th>FREQ.</th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-item>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </div>
+              <div class="nav-container">
+                <h3>Nav: </h3>
+                <p-table [value]="nav" class="nav-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th>TYPE</th>
+                      <th>STATION</th>
+                      <th>FREQ.</th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-item>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </div>
+              <div class="notes-container">
+                <h3>NOTES: </h3>
+                <span class="dimension-text">Dimension</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ps-3">
+        <div class="flight-status-container">
+          <div>
+            <div>
+              <h3>AWOPS</h3>
+              <span>MEP</span>
+              <br>
+              <span>Part 135</span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flight-details-container">
+                <div class="header">
+                  T/O
+                </div>
+
+                <div class="body">
+                  <div>
+                    <span>AD:</span>
+
+                    <div style="border-right: 1px solid white;">
+                      <div>
+                        <h4 style="padding-right: 70px" class="d-flex justify-content-end">REQ:</h4>
+                      </div>
+
+                      <div class="d-flex flex-column">
+                        <span>RVR/VIZ (T/O):</span>
+                        <span>RVR/VIZ (APRCH):</span>
+                        <span>DA:</span>
+                        <span>Wx:</span>
+                        <span>EOBT:</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span>SID:</span>
+
+                    <div>
+                      <h4 style="padding-right: 70px" class="d-flex justify-content-end">ACT:</h4>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span>ABV MIN:</span>
+                      <span>IFR:</span>
+                      <span>ABV MIN:</span>
+                      <span>METAR:</span>
+                      <span>AOBT:</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 85px;border-left: 1px solid white">
+            <div style="width: 224px;" >
+              <h4 style="padding-left: 20px">Flight Status</h4>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-3">
+    <div class="arr-container">
+      <div class="row">
+        <div class="col-lg-3 cod-md-3 col-sm-6">
+          <div class="dep-type-container">
+            <div>
+              <span class="me-4">ARR TYPE : </span>
+              <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+            </div>
+            <div>
+              <span>Plate provider :</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+          <div class="dep-name-container">
+            <div>
+                  <span>
+                    <span class="me-4">ARR NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+              <div>
+                <span>W</span>
+                <span>V</span>
+              </div>
+
+              <div>
+                <span>ETE</span>
+                <span>ETA</span>
+                <span>ATA</span>
+              </div>
+            </div>
+            <div class="alt-dep-container">
+              <i><img src="assets/icons/collapse.png" alt=""></i>
+              <div class="ps-3" style="border-left : 1px solid white">
+                <span>ALT DEP</span>
+                <br>
+                <div>
+                  <span class="me-4">AVAIL :</span>
+                  <i><img src="assets/icons/expand-small.png" alt=""></i>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="border-left: 1px solid white; margin-top: 10px  ">
+      <i class="position-relative" style="top: -10px"><img src="assets/icons/collapse.png"></i>
+
+      <div class="ps-3">
+        <div class="aprch-container">
+          <div class="row">
+            <div class="col-lg-3 cod-md-3 col-sm-6">
+              <div class="dep-type-container">
+                <div>
+                  <span class="me-4">APRCH TYPE : </span>
+                  <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                </div>
+                <div>
+                  <span>Plate provider :</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 cod-md-9 col-sm-6" style="border-left: 1px solid white;">
+              <div class="dep-name-container">
+                <div>
+                  <span>
+                    <span class="me-4">APRCH NAME :</span>
+                    <i class="position-relative" style="top : -5px"><img src="assets/icons/expand.png" alt=""></i>
+                  </span>
+                  <div>
+                    <span>W</span>
+                    <span>V</span>
+                  </div>
+
+                  <div>
+                    <span>ETE</span>
+                    <span>ETA</span>
+                    <span>ATA</span>
+                  </div>
+                </div>
+                <div class="alt-dep-container">
+                  <i><img src="assets/icons/collapse.png" alt=""></i>
+                  <div class="ps-3" style="border-left : 1px solid white">
+                    <span>ALT DEP</span>
+                    <br>
+                    <div>
+                      <span class="me-4">AVAIL :</span>
+                      <i><img src="assets/icons/expand-small.png" alt=""></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="position: absolute; top: 190px;">
+  <img src="assets/icons/Side%20bar%20left.png">
+</div>
+
+<div style="position: absolute; top: 190px; right: 0">
+  <img src="assets/icons/Side%20bar%20right.png ">
+</div>

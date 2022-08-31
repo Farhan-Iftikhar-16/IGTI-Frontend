@@ -1,0 +1,289 @@
+.navigation-notes-and-observation-container {
+  padding: 20px 40px;
+
+  .dep-to-dest-container {
+    background: #000000;
+    padding: 20px;
+
+    .row > div:first-child span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35.5131px;
+      line-height: 45px;
+      color: #7C7C7C;
+    }
+
+    .row >div:last-child {
+      .est-container, .act-container {
+        h6 {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21.6406px;
+          line-height: 27px;
+          color: #FFFFFF;
+        }
+
+        > div span {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12.4151px;
+          line-height: 16px;
+          color: #FFFFFF;
+        }
+      }
+
+      .est-container {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #FFFFFF;
+      }
+
+      .act-container {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .dep-container, .arr-container, .aprch-container {
+    background: #0A0A0A;
+    padding: 20px;
+    margin-top: 20px;
+
+    .dep-type-container {
+
+      span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21.2542px;
+        line-height: 27px;
+        color: #FFFFFF;
+      }
+
+      span:first-child {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+
+    .dep-name-container {
+      border-left: 1px solid white;
+
+      > div:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        span:first-child {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21.2542px;
+          line-height: 27px;
+          color: #FFFFFF;
+        }
+
+        div {
+          span {
+            display: inline-block;
+            height: 30px;
+            width: 55px;
+            border: 1px solid white;font-style: normal;
+            font-weight: 400;
+            font-size: 19.5068px;
+            line-height: 25px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .alt-dep-container {
+      margin-top: 30px;
+    }
+  }
+
+  .comms-nav-notes-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .comms-container {
+      width: 650px;
+      padding-right: 20px;
+      border-right: 1px solid white;
+    }
+
+    .nav-container {
+      width: 400px;
+      padding-right: 20px;
+      border-right: 1px solid white;
+    }
+
+    .notes-container {
+      width: 380px;
+      padding-right: 20px;
+    }
+
+    .dimension-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20.2568px;
+      line-height: 26px;
+      color: #FFFFFF;
+    }
+  }
+
+  .flight-status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    h3 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 27.8705px;
+      line-height: 35px;
+      color: #FFFFFF;
+    }
+
+    > div:first-child {
+      h3 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 37.8944px;
+        line-height: 48px;
+        color: #FFFFFF
+      }
+
+      span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22.1583px;
+        line-height: 28px;
+        color: #FFFFFF;
+      }
+    }
+
+    .flight-details-container {
+      border-right: 1px solid white;
+      padding: 0 10px;
+      width: 524px;
+
+      .header {
+        background: #686868;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .body {
+        display: flex;
+        justify-content: space-between;
+        background: #000000;
+        padding: 10px ;
+
+        > div {
+          width: 50%;
+
+          > span:first-child {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21.2542px;
+            line-height: 27px;
+            color: #FFFFFF;
+            padding-left: 5px;
+          }
+
+          div:last-child {
+            span {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 11.442px;
+              line-height: 14px;
+              color: #FFFFFF;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+:host::ng-deep {
+  p-table .p-datatable .p-datatable-wrapper {
+    .p-datatable-table{
+      .p-datatable-thead tr th {
+        background: #000000;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.3898px;
+        line-height: 22px;
+        color: #FFFFFF;
+        border: 1px solid white;
+        padding: 0 1rem !important;
+      }
+
+      .p-datatable-tbody tr {
+        td {
+          background: #000000;
+          padding: 0 1rem !important;
+          min-height: 24.75px !important;
+          height: 24.75px !important;
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+
+  p-table.comms-table .p-datatable .p-datatable-wrapper {
+    .p-datatable-table{
+      .p-datatable-tbody tr td:last-child, .p-datatable-tbody tr td:nth-last-child(-n+2) {
+        background: #123a1fe3 !important;
+      }
+
+      .p-datatable-tbody tr:first-child td:last-child, .p-datatable-tbody tr:first-child td:nth-last-child(-n+2) {
+        background: #123a1fe3 !important;
+      }
+
+      .p-datatable-thead tr th:last-child, .p-datatable-thead tr th:nth-last-child(-n+2) {
+        background: #0e2433 !important;
+      }
+
+      .p-datatable-tbody tr:first-child td:last-child, .p-datatable-tbody tr:first-child td:nth-last-child(-n+2) {
+        background: #0e2433 !important;
+      }
+
+      .p-datatable-tbody tr:last-child td:last-child, .p-datatable-tbody tr:nth-last-child(-n+2) td:nth-last-child(-n+2) {
+        background: #2AA3C9 !important;
+      }
+    }
+  }
+
+  p-table.nav-table .p-datatable .p-datatable-wrapper {
+    .p-datatable-table{
+      .p-datatable-tbody tr td:last-child, .p-datatable-tbody tr td:nth-last-child(-n+2) {
+        background: #123a1fe3 !important;
+      }
+
+      .p-datatable-tbody tr:first-child td:last-child, .p-datatable-tbody tr:first-child td:nth-last-child(-n+2) {
+        background: #123a1fe3 !important;
+      }
+
+      .p-datatable-thead tr th:last-child, .p-datatable-thead tr th:nth-last-child(-n+2) {
+        background: #2C9A5D !important;
+      }
+
+      .p-datatable-tbody tr:first-child td:last-child, .p-datatable-tbody tr:first-child td:nth-last-child(-n+2) {
+        background: #0e2433 !important;
+      }
+
+      .p-datatable-tbody tr:last-child td:last-child, .p-datatable-tbody tr:nth-last-child(-n+2) td:nth-last-child(-n+2) {
+        background: #2AA3C9 !important;
+      }
+    }
+  }
+}
